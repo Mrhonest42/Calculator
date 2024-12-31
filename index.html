@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Calculator</title>
+    <link href="https://fonts.google.com/specimen/Pacifico">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>JavaScript Calculator</h1><hr>
+    <script>
+        function calculate(result){
+            form.showResult.value=form.showResult.value + result;
+        }
+    </script>
+    <div class="container">
+
+        <form name="form">
+
+            <div class="show">
+                <input type="text" placeholder="0" name="showResult"/>
+            </div>
+
+            <div class="buttons">
+
+                <div class="row">
+                    <input type="button" name="seven" value="7" onClick="calculate(seven.value)">
+				    <input type="button" name="eight" value="8" onClick="calculate(eight.value)">
+				    <input type="button" name="nine" value="9" onClick="calculate(nine.value)">
+				    <input type="button" name="addition" value="+" onClick="calculate(addition.value)">
+                </div>
+
+                <div class="row">
+                    <input type="button" name="four" value="4" onClick="calculate(four.value)">
+                    <input type="button" name="five" value="5" onClick="calculate(five.value)">
+                    <input type="button" name="six" value="6" onClick="calculate(six.value)">
+                    <input type="button" name="subraction" value="-" onClick="calculate(subraction.value)">
+                </div>
+                    
+                <div class="row">
+                    <input type="button" name="one" value="1" onClick="calculate(one.value)">
+                    <input type="button" name="two" value="2" onClick="calculate(two.value)">
+                    <input type="button" name="three" value="3" onClick="calculate(three.value)">
+                    <input type="button" name="multiplication" value="*" onClick="calculate(multiplication.value)">
+                </div>
+                    
+                <div class="row">
+                    <input type="button" name="b0" value="0" onClick="calculate(b0.value)">
+                    <input type="button" name="potb" value="." onClick="calculate(potb.value)">
+                    <input type="button" name="divb" value="/" onClick="calculate(divb.value)">
+                    <input type="button" class="red" value="=" onClick="showResult.value=eval(showResult.value)">
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

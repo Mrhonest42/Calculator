@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Calculator</title>
+    <style>
+    @import url('https://fonts.google.com/specimen/Pacifico');
+
+body, html{
+    background-color: #ECEDEF;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    position: fixed;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.2);
+    border-radius: 14px;
+    padding-bottom: 20px;
+    width: 320px;
+}
+.show{
+    width: 100%;
+    height: 60px;
+    padding: 40px 0;
+    background: #FF0509;
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+}
+.buttons{
+    padding: 20px 20px 0 20px;
+}
+.row{
+    width: 280px;
+    float: left;
+}
+input[type=button]{
+    width: 60px;
+    height: 60px;
+    float: left;
+    padding: 0;
+    margin: 5px;
+    box-sizing: border-box;
+    background: #ecedef;
+    border: none;
+    font-size: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    font-weight: 700;
+    color: #5E5858;
+    cursor: pointer;
+}
+input[type=text]{
+    width: 270px;
+    height: 60px;
+    float: left;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    background: none;
+    color: #ffffff;
+    text-align: right;
+    font-size: 60px;
+    line-height: 60px;
+    margin: 0 25px;
+    outline:none;
+}
+.red{
+    background: #FF0509 !important;
+    color: #ffffff !important;
+}
+h1{
+    text-align: center;
+    font-family: Pacifico, specimen;
+}
+hr{
+    width: 20%;
+    color: pink;
+}
+</style>
+    <link href="https://fonts.google.com/specimen/Pacifico">
+</head>
+<body>
+    <h1>JavaScript Calculator</h1><hr>
+    <script>
+        function calculate(result){
+            form.showResult.value=form.showResult.value+result;
+        }
+    </script>
+    <div class="container">
+
+        <form name="form">
+
+            <div class="show">
+                <input type="text" placeholder="0" name="showResult"/>
+            </div>
+
+            <div class="buttons">
+
+                <div class="row">
+                    <input type="button" name="seven" value="7" onClick="calculate(seven.value)">
+				    <input type="button" name="eight" value="8" onClick="calculate(eight.value)">
+				    <input type="button" name="nine" value="9" onClick="calculate(nine.value)">
+				    <input type="button" name="addition" value="+" onClick="calculate(addition.value)">
+                </div>
+
+                <div class="row">
+                    <input type="button" name="four" value="4" onClick="calculate(four.value)">
+                    <input type="button" name="five" value="5" onClick="calculate(five.value)">
+                    <input type="button" name="six" value="6" onClick="calculate(six.value)">
+                    <input type="button" name="subraction" value="-" onClick="calculate(subraction.value)">
+                </div>
+                    
+                <div class="row">
+                    <input type="button" name="one" value="1" onClick="calculate(one.value)">
+                    <input type="button" name="two" value="2" onClick="calculate(two.value)">
+                    <input type="button" name="three" value="3" onClick="calculate(three.value)">
+                    <input type="button" name="multiplication" value="*" onClick="calculate(multiplication.value)">
+                </div>
+                    
+                <div class="row">
+                    <input type="button" name="b0" value="0" onClick="calculate(b0.value)">
+                    <input type="button" name="potb" value="." onClick="calculate(potb.value)">
+                    <input type="button" name="divb" value="/" onClick="calculate(divb.value)">
+                    <input type="button" class="red" value="=" onClick="showResult.value=eval(showResult.value)">
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
